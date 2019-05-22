@@ -16,5 +16,11 @@ class Student
     sql = "create table if not exists students (id integer primary key, name text, grade text);"
     DB[:conn].execute(sql)
   end
+
+  def self.drop_table
+    sql = "drop table students;"
+    DB[:conn].execute(sql)
+  end
+
   
 end
